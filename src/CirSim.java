@@ -394,10 +394,14 @@ public class CirSim extends Frame
         chipMenu.add(getClassCheckItem("Add DAC", "DACElm"));
         chipMenu.add(getClassCheckItem("Add ADC", "ADCElm"));
         chipMenu.add(getClassCheckItem("Add Latch", "LatchElm"));
+        Menu graphicsMenu = new Menu("Graphics");
+        mainMenu.add(graphicsMenu);
+        graphicsMenu.add(getClassCheckItem("Add text", "TextElm"));
+        graphicsMenu.add(getClassCheckItem("Add arrow", "ArrowElm"));
+        graphicsMenu.add(getClassCheckItem("Add box", "BoxElm"));
+        graphicsMenu.add(getClassCheckItem("Add border", "BorderElm"));
         Menu otherMenu = new Menu("Other");
         mainMenu.add(otherMenu);
-        otherMenu.add(getClassCheckItem("Add Text", "TextElm"));
-        otherMenu.add(getClassCheckItem("Add Box", "BoxElm"));
         otherMenu.add(getClassCheckItem("Add Scope Probe", "ProbeElm"));
         otherMenu.add(getCheckItem("Drag All (Alt-drag)", "DragAll"));
         otherMenu.add(getCheckItem(
