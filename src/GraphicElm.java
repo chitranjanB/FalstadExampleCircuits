@@ -12,5 +12,9 @@ class GraphicElm extends CircuitElm
     }
 
     int getPostCount() { return 0; }
+    
+    boolean canViewInScope() {
+        return false;
+    }
 }
 
