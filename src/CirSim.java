@@ -684,7 +684,6 @@ public class CirSim extends Frame
     }
 
     void destroyFrame() {
-	dispose();
 	System.exit(0);
     }
     
@@ -2120,8 +2119,13 @@ public class CirSim extends Frame
 		URL url = new URL(getCodeBase() + "setuplist.txt");
 		ba = readUrlData(url);
 	    } catch (Exception e) {
-		URL url = getClass().getClassLoader().getResource("setuplist.txt");
-		ba = readUrlData(url);
+                try {
+                    URL url = getClass().getClassLoader().getResource("setuplist.txt");
+                    ba = readUrlData(url);
+                } catch (Exception f) {
+                    System.out.println("Couldn't read the setup list");
+                    return;
+                }
 	    }
 	    // /hausen
 
@@ -2167,8 +2171,8 @@ public class CirSim extends Frame
 		p += l;
 	    }
 	} catch (Exception e) {
+            System.out.println("Error while reading the setuplist!");
 	    e.printStackTrace();
-	    stop("Can't read setuplist.txt!", null);
 	}
     }
 
