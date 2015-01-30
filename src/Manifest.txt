@@ -1,1 +1,1 @@
-Main-Class: Circuit
+Main-Class: CirSim

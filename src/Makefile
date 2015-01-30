@@ -1,8 +1,5 @@
-PLUGINJAR=/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/plugin.jar
-#PLUGINJAR=/usr/share/icedtea-web/plugin.jar
-
 all:
-	javac -classpath $(PLUGINJAR):. *.java
+	javac *.java
 
 jar: circuit.jar
 

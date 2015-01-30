@@ -159,18 +159,16 @@ public class CirSim extends Frame
 	return q % x;
     }
     CircuitCanvas cv;
-    Circuit applet;
-
-    CirSim(Circuit a) {
-	super("Circuit Simulator v1.6.1a");
-	applet = a;
-	useFrame = false;
-    }
 
     String startCircuit = null;
     String startLabel = null;
     String startCircuitText = null;
     String baseURL = "http://www.falstad.com/circuit/";
+    
+    public static void main(String[] args) {
+        CirSim simulation = new CirSim();
+        simulation.init();
+    }
     
     public void init() {
 	String euroResistor = null;
@@ -179,48 +177,11 @@ public class CirSim extends Frame
 	boolean convention = true;
 
 	CircuitElm.initClass(this);
-
-	try {
-	    baseURL = applet.getDocumentBase().getFile();
-	    // look for circuit embedded in URL
-	    String doc = applet.getDocumentBase().toString();
-	    int in = doc.indexOf('#');
-	    if (in > 0) {
-		String x = null;
-		try {
-		    x = doc.substring(in+1);
-		    x = URLDecoder.decode(x);
-		    startCircuitText = x;
-		} catch (Exception e) {
-		    System.out.println("can't decode " + x);
-		    e.printStackTrace();
-		}
-	    }
-	    in = doc.lastIndexOf('/');
-	    if (in > 0)
-		baseURL = doc.substring(0, in+1);
-	    
-	    String param = applet.getParameter("PAUSE");
-	    if (param != null)
-		pause = Integer.parseInt(param);
-	    startCircuit = applet.getParameter("startCircuit");
-	    startLabel   = applet.getParameter("startLabel");
-	    euroResistor = applet.getParameter("euroResistors");
-	    useFrameStr  = applet.getParameter("useFrame");
-	    String x = applet.getParameter("whiteBackground");
-	    if (x != null && x.equalsIgnoreCase("true"))
-		printable = true;
-	    x = applet.getParameter("conventionalCurrent");
-	    if (x != null && x.equalsIgnoreCase("true"))
-		convention = false;
-	} catch (Exception e) { }
 	
 	boolean euro = (euroResistor != null && euroResistor.equalsIgnoreCase("true"));
 	useFrame = (useFrameStr == null || !useFrameStr.equalsIgnoreCase("false"));
-	if (useFrame)
-	    main = this;
-	else
-	    main = applet;
+        main = this;
+
 	
 	String os = System.getProperty("os.name");
 	isMac = (os.indexOf("Mac ") == 0);
@@ -531,24 +492,13 @@ public class CirSim extends Frame
 	else
 	    readSetup(null, 0, false);
 
-	if (useFrame) {
-	    Dimension screen = getToolkit().getScreenSize();
-	    resize(860, 640);
-	    handleResize();
-	    Dimension x = getSize();
-	    setLocation((screen.width  - x.width)/2,
-			(screen.height - x.height)/2);
-	    show();
-	} else {
-	    if (!powerCheckItem.getState()) {
-		main.remove(powerBar);
-		main.remove(powerLabel);
-		main.validate();
-	    }
-	    hide();
-	    handleResize();
-	    applet.validate();
-	}
+	Dimension screen = getToolkit().getScreenSize();
+	resize(860, 640);
+	handleResize();
+	Dimension x = getSize();
+	setLocation((screen.width  - x.width)/2,
+	    (screen.height - x.height)/2);
+	show();
 	requestFocus();
 
 	addWindowListener(new WindowAdapter()
@@ -736,15 +686,8 @@ public class CirSim extends Frame
     }
 
     void destroyFrame() {
-	if (applet == null)
-	{
-	    dispose();
-	    System.exit(0);
-	}
-	else
-	{
-	    applet.destroyFrame();
-	}
+	dispose();
+	System.exit(0);
     }
     
     public boolean handleEvent(Event ev) {
@@ -2165,8 +2108,6 @@ public class CirSim extends Frame
 
     URL getCodeBase() {
 	try {
-	    if (applet != null)
-		return applet.getCodeBase();
 	    File f = new File(".");
 	    return new URL("file:" + f.getCanonicalPath() + "/");
 	} catch (Exception e) {
