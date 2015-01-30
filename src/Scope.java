@@ -177,7 +177,7 @@ class Scope {
 	int i;
 	if (pixels == null || dpixels == null)
 	    return;
-	int col = (sim.printableCheckItem.getState()) ? 0xFFFFFFFF : 0;
+	int col = 0;
 	for (i = 0; i != pixels.length; i++)
 	    pixels[i] = col;
 	for (i = 0; i != rect.width; i++)
@@ -212,7 +212,7 @@ class Scope {
 	if (pixels == null)
 	    return;
 	int i;
-	int col = (sim.printableCheckItem.getState()) ? 0xFFFFFFFF : 0;
+	int col = 0;
 	for (i = 0; i != pixels.length; i++)
 	    pixels[i] = col;
 	int x = 0;

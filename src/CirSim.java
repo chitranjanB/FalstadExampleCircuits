@@ -272,8 +272,6 @@ public class CirSim extends Frame
 	m.add(smallGridCheckItem = getCheckItem("Small Grid"));
 	m.add(euroResistorCheckItem = getCheckItem("European Resistors"));
 	euroResistorCheckItem.setState(euro);
-	m.add(printableCheckItem = getCheckItem("White Background"));
-	printableCheckItem.setState(printable);
 	m.add(conventionCheckItem = getCheckItem("Conventional Current Motion"));
 	conventionCheckItem.setState(convention);
 	m.add(idealWireCheckItem = getCheckItem("Ideal Wires"));
@@ -727,15 +725,9 @@ public class CirSim extends Frame
 	g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 		RenderingHints.VALUE_ANTIALIAS_ON);
 	CircuitElm.selectColor = Color.cyan;
-	if (printableCheckItem.getState()) {
-  	    CircuitElm.whiteColor = Color.black;
-  	    CircuitElm.lightGrayColor = Color.black;
-  	    g.setColor(Color.white);
-	} else {
-	    CircuitElm.whiteColor = Color.white;
-	    CircuitElm.lightGrayColor = Color.lightGray;
-	    g.setColor(Color.black);
-	}
+	CircuitElm.whiteColor = Color.white;
+	CircuitElm.lightGrayColor = Color.lightGray;
+	g.setColor(Color.black);
 	g.fillRect(0, 0, winSize.width, winSize.height);
 	if (!stoppedCheck.getState()) {
 	    try {
