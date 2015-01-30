@@ -84,7 +84,7 @@ import java.util.StringTokenizer;
 	    if (link != 0) {
 		int i;
 		for (i = 0; i != sim.elmList.size(); i++) {
-		    Object o = sim.elmList.elementAt(i);
+		    Object o = sim.elmList.get(i);
 		    if (o instanceof Switch2Elm) {
 			Switch2Elm s2 = (Switch2Elm) o;
 			if (s2.link == link)
