@@ -1999,7 +1999,7 @@ public class CirSim extends Frame
 
     void doImport() {
         if (impDialog == null) {
-            impDialog = ImportExportDialogFactory.Create(this,
+            impDialog = new ImportExportFileDialog(this,
                     ImportExportDialog.Action.IMPORT);
         }
         //	    impDialog = new ImportExportClipboardDialog(this,
@@ -2014,7 +2014,7 @@ public class CirSim extends Frame
             dump = baseURL + "#" + URLEncoder.encode(dump);
         }
         if (expDialog == null) {
-            expDialog = ImportExportDialogFactory.Create(this,
+            expDialog = new ImportExportFileDialog(this,
                     ImportExportDialog.Action.EXPORT);
 //	    expDialog = new ImportExportClipboardDialog(this,
 //		 ImportExportDialog.Action.EXPORT);
