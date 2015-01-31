@@ -29,7 +29,7 @@ import java.util.StringTokenizer;
 	    int hs = sim.euroResistorCheckItem.getState() ? 6 : 8;
 	    double v1 = volts[0];
 	    double v2 = volts[1];
-	    setBbox(point1, point2, hs);
+	    setBbox(point1, point2, 10);
 	    draw2Leads(g);
 	    setPowerColor(g, true);
 	    double segf = 1./segments;
