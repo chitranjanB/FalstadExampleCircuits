@@ -2,13 +2,12 @@ import java.awt.*;
 import java.util.StringTokenizer;
 
     class WireElm extends ResistorElm {
-	public static boolean ideal = false;
-	private static final double defaultResistance = 1E-12;
-	public WireElm(int xx, int yy) { super(xx, yy); resistance = defaultResistance; }
+	public WireElm(int xx, int yy) {
+            super(xx, yy);
+        }
 	public WireElm(int xa, int ya, int xb, int yb, int f,
 		    StringTokenizer st) {
 	    super(xa, ya, xb, yb, f, new StringTokenizer("0.0"));
-	    resistance = defaultResistance;
 	}
 	static final int FLAG_SHOWCURRENT = 1;
 	static final int FLAG_SHOWVOLTAGE = 2;
@@ -27,30 +26,20 @@ import java.util.StringTokenizer;
 	    drawPosts(g);
 	}
 
-	void calculateCurrent() {
-	    if (!ideal) {
-		super.calculateCurrent();
-	    }
-	}
 	void stamp() {
-	    if (ideal) {
-		sim.stampVoltageSource(nodes[0], nodes[1], voltSource, 0);
-	    } else {
-		sim.stampResistor(nodes[0], nodes[1], resistance);
-	    }
+            sim.stampVoltageSource(nodes[0], nodes[1], voltSource, 0);
 	}
-	boolean mustShowCurrent() {
+
+        boolean mustShowCurrent() {
 	    return (flags & FLAG_SHOWCURRENT) != 0;
 	}
-	boolean mustShowVoltage() {
+	
+        boolean mustShowVoltage() {
 	    return (flags & FLAG_SHOWVOLTAGE) != 0;
 	}
-	int getVoltageSourceCount() {
-	    if(ideal) {
-		return 1;
-	    } else {
-		return super.getVoltageSourceCount();
-	    }
+	
+        int getVoltageSourceCount() {
+	    return 1;
 	}
 	void getInfo(String arr[]) {
 	    arr[0] = "wire";
@@ -58,21 +47,13 @@ import java.util.StringTokenizer;
 	    arr[2] = "V = " + getVoltageText(volts[0]);
 	}
 	double getPower() {
-	    if (ideal) {
-		return 0;
-	    } else {
-		return super.getPower();
-	    }
+	    return 0;
 	}
 	double getVoltageDiff() {
-	    if (ideal) {
-		return volts[0];
-	    } else {
-		return super.getVoltageDiff();
-	    }
+	    return volts[0];
 	}
 	boolean isWire() {
-	    return ideal;
+	    return true;
 	}
 	public EditInfo getEditInfo(int n) {
 	    if (n == 0) {
