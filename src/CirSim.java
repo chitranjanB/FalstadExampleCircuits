@@ -44,7 +44,6 @@ import java.io.File;
 import java.io.FilterInputStream;
 import java.lang.reflect.Constructor;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.StringTokenizer;
@@ -91,7 +90,7 @@ public class CirSim extends Frame
     Label titleLabel;
     Button resetButton;
     Button dumpMatrixButton;
-    MenuItem exportItem, exportLinkItem, importItem, exitItem, undoItem, redoItem,
+    MenuItem exportItem, importItem, exitItem, undoItem, redoItem,
             cutItem, copyItem, pasteItem, selectAllItem, optionsItem;
     Menu optionsMenu;
     Checkbox stoppedCheck;
@@ -185,9 +184,6 @@ public class CirSim extends Frame
     String startCircuit = null;
     String startLabel = null;
     String startCircuitText = null;
-    String baseURL = "http://www.falstad.com/circuit/";
-
-    boolean shown = false;
 
     long lastTime = 0, lastFrameTime, lastIterTime, secTime = 0;
     int frames = 0;
@@ -199,10 +195,6 @@ public class CirSim extends Frame
     boolean converged;
     int subIterations;
 
-    public String getAppletInfo() {
-        return "Circuit by Paul Falstad";
-    }
-
     int getrand(int x) {
         int q = random.nextInt();
         if (q < 0) {
@@ -213,8 +205,6 @@ public class CirSim extends Frame
 
     public void init() {
         String euroResistor = null;
-        String useFrameStr = null;
-        boolean printable = true; // hausen: changed from false to true
 
         boolean convention = true;
         CircuitElm.initClass(this);
@@ -254,9 +244,9 @@ public class CirSim extends Frame
 
         m.add(importItem = getMenuItem("Import"));
         m.add(exportItem = getMenuItem("Export"));
-        //	m.add(exportLinkItem = getMenuItem("Export Link"));
         m.addSeparator();
         m.add(exitItem = getMenuItem("Exit"));
+        
         m = new Menu("Edit");
         m.add(undoItem = getMenuItem("Undo"));
         undoItem.setShortcut(new MenuShortcut(KeyEvent.VK_Z));
@@ -273,14 +263,14 @@ public class CirSim extends Frame
         m.add(selectAllItem = getMenuItem("Select All"));
         selectAllItem.setShortcut(new MenuShortcut(KeyEvent.VK_A));
         mb.add(m);
+        
         m = new Menu("Scope");
         mb.add(m);
-
         m.add(getMenuItem("Stack All", "stackAll"));
         m.add(getMenuItem("Unstack All", "unstackAll"));
+        
         optionsMenu = m = new Menu("Options");
         mb.add(m);
-
         m.add(dotsCheckItem = getCheckItem("Show Current"));
         dotsCheckItem.setState(false); // hausen: changed from true to false
         m.add(voltsCheckItem = getCheckItem("Show Voltage"));
@@ -295,6 +285,7 @@ public class CirSim extends Frame
         m.add(conventionCheckItem = getCheckItem("Conventional Current Motion"));
         conventionCheckItem.setState(convention);
         m.add(optionsItem = getMenuItem("Other Options..."));
+        
         Menu circuitsMenu = new Menu("Circuits");
         mb.add(circuitsMenu);
         mainMenu.add(getClassCheckItem("Add Wire", "WireElm"));
@@ -486,16 +477,9 @@ public class CirSim extends Frame
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent we) {
-                destroyFrame();
+                System.exit(0);
             }
         });
-    }
-
-    public void triggerShow() {
-        if (!shown) {
-            show();
-        }
-        shown = true;
     }
 
     @Override
@@ -660,14 +644,11 @@ public class CirSim extends Frame
         circuitBottom = 0;
     }
 
-    void destroyFrame() {
-        System.exit(0);
-    }
 
     @Override
     public boolean handleEvent(Event ev) {
         if (ev.id == Event.WINDOW_DESTROY) {
-            destroyFrame();
+            System.exit(0);
             return true;
         }
         return super.handleEvent(ev);
@@ -1829,16 +1810,13 @@ public class CirSim extends Frame
             dumpMatrix = true;
         }
         if (e.getSource() == exportItem) {
-            doExport(false);
+            doExport();
         }
         if (e.getSource() == optionsItem) {
             doEdit(new EditOptions(this));
         }
         if (e.getSource() == importItem) {
             doImport();
-        }
-        if (e.getSource() == exportLinkItem) {
-            doExport(true);
         }
         if (e.getSource() == undoItem) {
             doUndo();
@@ -1865,7 +1843,7 @@ public class CirSim extends Frame
             doSelectAll();
         }
         if (e.getSource() == exitItem) {
-            destroyFrame();
+            System.exit(0);
             return;
         }
         if (ac.compareTo("stackAll") == 0) {
@@ -2008,11 +1986,8 @@ public class CirSim extends Frame
         impDialog.execute();
     }
 
-    void doExport(boolean url) {
+    void doExport() {
         String dump = dumpCircuit();
-        if (url) {
-            dump = baseURL + "#" + URLEncoder.encode(dump);
-        }
         if (expDialog == null) {
             expDialog = new ImportExportFileDialog(this,
                     ImportExportDialog.Action.EXPORT);
@@ -2463,16 +2438,16 @@ public class CirSim extends Frame
         }
         // snap grid, unless we're only dragging text elements
         int i;
-        for (i = 0; i != elmList.size(); i++) {
+        /*for (i = 0; i != elmList.size(); i++) {
             CircuitElm ce = getElm(i);
             if (ce.isSelected() && !(ce instanceof GraphicElm)) {
                 break;
             }
         }
-        if (i != elmList.size()) {
+        if (i != elmList.size()) {*/
             x = snapGrid(x);
             y = snapGrid(y);
-        }
+        //}
         int dx = x - dragX;
         int dy = y - dragY;
         if (dx == 0 && dy == 0) {
