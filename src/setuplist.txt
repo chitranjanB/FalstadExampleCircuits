@@ -1,4 +1,8 @@
 ### setuplist.txt first line must be a comment
++Tutorial
+Intro.txt Introduction
+-
++Original examples
 +Basics
 ohms.txt Ohm's Law
 resistors.txt Resistors
@@ -369,3 +373,4 @@ spark-marx.txt Marx Generator
 -
 -
 blank.txt Blank Circuit
+-
