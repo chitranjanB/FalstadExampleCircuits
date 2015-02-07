@@ -421,7 +421,6 @@ public class CirSim extends Frame
         powerBar.addAdjustmentListener(this);
         powerBar.disable();
         powerLabel.disable();
-        main.add(new Label("www.falstad.com"));
         if (true) {
             main.add(new Label(""));
         }
@@ -467,19 +466,19 @@ public class CirSim extends Frame
             readSetup(null, 0, false);
         }
         Dimension screen = getToolkit().getScreenSize();
-        resize(860, 640);
+        resize(screen.width, screen.height);
         handleResize();
-        Dimension x = getSize();
+/*      Dimension x = getSize();
         setLocation((screen.width - x.width) / 2,
-                (screen.height - x.height) / 2);
+                (screen.height - x.height) / 2);*/
         show();
         requestFocus();
-        addWindowListener(new WindowAdapter() {
+/*        addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent we) {
                 System.exit(0);
             }
-        });
+        });*/
     }
 
     @Override
