@@ -2437,16 +2437,16 @@ public class CirSim extends Frame
         }
         // snap grid, unless we're only dragging text elements
         int i;
-        /*for (i = 0; i != elmList.size(); i++) {
+        for (i = 0; i != elmList.size(); i++) {
             CircuitElm ce = getElm(i);
             if (ce.isSelected() && !(ce instanceof GraphicElm)) {
                 break;
             }
         }
-        if (i != elmList.size()) {*/
+        if (i != elmList.size()) {
             x = snapGrid(x);
             y = snapGrid(y);
-        //}
+        }
         int dx = x - dragX;
         int dy = y - dragY;
         if (dx == 0 && dy == 0) {
