@@ -8,7 +8,7 @@ public abstract class CircuitElm implements Editable {
     static Color colorScale[];
     static double currentMult, powerMult;
     static Point ps1, ps2;
-    static CirSim sim;
+    static Buzzr sim;
     static Color whiteColor, selectColor, lightGrayColor;
     static Font unitsFont;
 
@@ -28,7 +28,7 @@ public abstract class CircuitElm implements Editable {
     Class getDumpClass() { return getClass(); }
     int getDefaultFlags() { return 0; }
 
-    static void initClass(CirSim s) {
+    static void initClass(Buzzr s) {
 	unitsFont = new Font("SansSerif", 0, 10);
 	sim = s;
 	
@@ -325,8 +325,8 @@ public abstract class CircuitElm implements Editable {
 	if (sim.dragElm == null && !needsHighlight() &&
 	    sim.getCircuitNode(n).links.size() == 2)
 	    return;
-	if (sim.mouseMode == CirSim.MODE_DRAG_ROW ||
-	    sim.mouseMode == CirSim.MODE_DRAG_COLUMN)
+	if (sim.mouseMode == Buzzr.MODE_DRAG_ROW ||
+	    sim.mouseMode == Buzzr.MODE_DRAG_COLUMN)
 	    return;
 	drawPost(g, x0, y0);
     }
@@ -471,7 +471,7 @@ public abstract class CircuitElm implements Editable {
 	if (va < 1e-6)
 	    return showFormat.format(v*1e9) + " n" + u;
 	if (va < 1e-3)
-	    return showFormat.format(v*1e6) + " " + CirSim.muString + u;
+	    return showFormat.format(v*1e6) + " " + Buzzr.muString + u;
 	if (va < 1)
 	    return showFormat.format(v*1e3) + " m" + u;
 	if (va < 1e3)
@@ -491,7 +491,7 @@ public abstract class CircuitElm implements Editable {
 	if (va < 1e-6)
 	    return shortFormat.format(v*1e9) + "n" + u;
 	if (va < 1e-3)
-	    return shortFormat.format(v*1e6) + CirSim.muString + u;
+	    return shortFormat.format(v*1e6) + Buzzr.muString + u;
 	if (va < 1)
 	    return shortFormat.format(v*1e3) + "m" + u;
 	if (va < 1e3)

@@ -1,6 +1,6 @@
 class EditOptions implements Editable {
-    CirSim sim;
-    public EditOptions(CirSim s) { sim = s; }
+    Buzzr sim;
+    public EditOptions(Buzzr s) { sim = s; }
     public EditInfo getEditInfo(int n) {
 	if (n == 0)
 	    return new EditInfo("Time step size (s)", sim.timeStep, 0, 0);

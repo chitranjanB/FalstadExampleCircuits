@@ -1,9 +1,9 @@
 class Diode {
     int nodes[];
-    CirSim sim;
+    Buzzr sim;
 
     
-    Diode(CirSim s) {
+    Diode(Buzzr s) {
 	sim = s;
 	nodes = new int[2];
     }

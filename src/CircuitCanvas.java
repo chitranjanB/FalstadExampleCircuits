@@ -1,8 +1,8 @@
 import java.awt.*;
 
 class CircuitCanvas extends Canvas {
-    CirSim pg;
-    CircuitCanvas(CirSim p) {
+    Buzzr pg;
+    CircuitCanvas(Buzzr p) {
 	pg = p;
     }
     public Dimension getPreferredSize() {

@@ -9,12 +9,12 @@ import java.nio.charset.Charset;
 class ImportExportFileDialog
 implements ImportExportDialog
 {
-    CirSim cframe;
+    Buzzr cframe;
     private static String circuitDump;
     Action type;
     private static String directory = ".";
 
-    ImportExportFileDialog(CirSim f, Action type)
+    ImportExportFileDialog(Buzzr f, Action type)
     {
 	if ( directory.equals(".") )
 	{

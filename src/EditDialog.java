@@ -10,14 +10,14 @@ interface Editable {
 
 class EditDialog extends Dialog implements AdjustmentListener, ActionListener, ItemListener {
     Editable elm;
-    CirSim cframe;
+    Buzzr cframe;
     Button applyButton, okButton;
     EditInfo einfos[];
     int einfocount;
     final int barmax = 1000;
     NumberFormat noCommaFormat;
 
-    EditDialog(Editable ce, CirSim f) {
+    EditDialog(Editable ce, Buzzr f) {
 	super(f, "Edit Component", false);
 	cframe = f;
 	elm = ce;

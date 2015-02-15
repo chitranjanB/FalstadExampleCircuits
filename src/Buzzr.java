@@ -48,7 +48,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.StringTokenizer;
 
-public class CirSim extends Frame
+public class Buzzr extends Frame
         implements ComponentListener, ActionListener, AdjustmentListener,
         MouseMotionListener, MouseListener, ItemListener, KeyListener {
 
@@ -77,7 +77,7 @@ public class CirSim extends Frame
     static final int resct = 6;
 
     public static void main(String[] args) {
-        CirSim simulation = new CirSim();
+        Buzzr simulation = new Buzzr();
         simulation.init();
     }
 

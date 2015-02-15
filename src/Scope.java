@@ -29,8 +29,8 @@ class Scope {
     int pixels[];
     int draw_ox, draw_oy;
     float dpixels[];
-    CirSim sim;
-    Scope(CirSim s) {
+    Buzzr sim;
+    Scope(Buzzr s) {
 	rect = new Rectangle();
 	reset();
 	sim = s;
