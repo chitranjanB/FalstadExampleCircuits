@@ -6,8 +6,8 @@ class BorderElm extends GraphicElm {
 
     public BorderElm(int xx, int yy) {
         super(xx, yy);
-        x2 = xx + 16;
-        y2 = yy + 16;
+        x2 = xx;
+        y2 = yy;
         setBbox(x, y, x2, y2);
     }
 

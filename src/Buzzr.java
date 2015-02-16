@@ -473,12 +473,12 @@ public class Buzzr extends Frame
                 (screen.height - x.height) / 2);*/
         show();
         requestFocus();
-/*        addWindowListener(new WindowAdapter() {
+        addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent we) {
                 System.exit(0);
             }
-        });*/
+        });
     }
 
     @Override

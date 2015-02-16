@@ -1,13 +1,12 @@
 import java.awt.*;
 import java.util.StringTokenizer;
-import java.util.Vector;
 
 class BoxElm extends GraphicElm {
 
     public BoxElm(int xx, int yy) {
 	super(xx, yy);
-	x2 = xx + 16;
-	y2 = yy + 16;
+	x2 = xx;
+	y2 = yy;
 	setBbox(x, y, x2, y2);
     }
 
