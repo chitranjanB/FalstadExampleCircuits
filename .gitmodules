@@ -1,0 +1,3 @@
+[submodule "circuits/buzzr-tutorial"]
+	path = circuits/buzzr-tutorial
+	url = https://github.com/CapacitorSet/buzzr-tutorial
