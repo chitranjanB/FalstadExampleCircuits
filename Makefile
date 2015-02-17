@@ -4,6 +4,7 @@ all:
 	javac *.java
 
 jar: $(name).jar
+	chmod +x $(name).jar
 
 src:
 	cd .. && zip -r circuit-src.zip src/Makefile src/*.java src/*.txt src/circuits/
