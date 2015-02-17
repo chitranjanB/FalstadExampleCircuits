@@ -1,6 +1,11 @@
 ### setuplist.txt first line must be a comment
 +Tutorial
-Tutorials/Intro.txt Introduction
+Buzzr/Current.txt Current
+Buzzr/Voltage.txt Voltage
+Buzzr/VoltageDifference.txt Voltage difference
+Buzzr/SupplyvsUse.txt Supplying energy, using energy
+Buzzr/Parallel.txt Elements in parallel
+Buzzr/Series.txt Elements in series
 -
 +Original examples
 +Basics
