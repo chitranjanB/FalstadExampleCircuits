@@ -1,0 +1,376 @@
+### setuplist.txt first line must be a comment
++Tutorial
+Tutorials/Intro.txt Introduction
+-
++Original examples
++Basics
+Classic/ohms.txt Ohm's Law
+Classic/resistors.txt Resistors
+Classic/cap.txt Capacitor
+Classic/induct.txt Inductor
+Classic/lrc.txt LRC Circuit
+Classic/voltdivide.txt Voltage Divider
+Classic/pot.txt Potentiometer
+Classic/potdivide.txt Potentiometer Divider
+Classic/thevenin.txt Thevenin's Theorem
+Classic/norton.txt Norton's Theorem
+-
++A/C Circuits
+Classic/capac.txt Capacitor
+Classic/inductac.txt Inductor
+Classic/capmultcaps.txt Caps of Various Capacitances
+Classic/capmultfreq.txt Caps w/ Various Frequencies
+Classic/indmultind.txt Inductors of Various Inductances
+Classic/indmultfreq.txt Inductors w/ Various Frequencies
+Classic/impedance.txt Impedances of Same Magnitude
+Classic/res-series.txt Series Resonance
+Classic/res-par.txt Parallel Resonance
+-
++Passive Filters
+Classic/filt-hipass.txt High-Pass Filter (RC)
+Classic/filt-lopass.txt Low-Pass Filter (RC)
+Classic/filt-hipass-l.txt High-Pass Filter (RL)
+Classic/filt-lopass-l.txt Low-Pass Filter (RL)
+Classic/bandpass.txt Band-pass Filter
+Classic/notch.txt Notch Filter
+Classic/twint.txt Twin-T Filter
+Classic/crossover.txt Crossover
+Classic/butter10lo.txt Butterworth Low-Pass (10 pole)
+Classic/besselbutter.txt Bessel vs Butterworth
+Classic/ringing.txt Band-pass with Ringing
+-
++Other Passive Circuits
++Series/Parallel
+Classic/indseries.txt Inductors in Series
+Classic/indpar.txt Inductors in Parallel
+Classic/capseries.txt Caps in Series
+Classic/cappar.txt Caps in Parallel
+-
++Transformers
+Classic/transformer.txt Transformer
+Classic/transformerdc.txt Transformer w/ DC
+Classic/transformerup.txt Step-Up Transformer
+Classic/transformerdown.txt Step-Down Transformer
+Classic/longdist.txt Long-Distance Power Transmission
+-
++Relays
+Classic/relay.txt Relay
+Classic/relayand.txt Relay AND
+Classic/relayor.txt Relay OR
+Classic/relayxor.txt Relay XOR
+Classic/relaymux.txt Relay Mux
+Classic/relayff.txt Relay Flip-Flop
+Classic/relaytff.txt Relay Toggle Flip-Flop
+Classic/relayctr.txt Relay Counter
+-
+Classic/3way.txt 3-Way Light Switches
+Classic/4way.txt 3- and 4-Way Light Switches
+Classic/diff.txt Differentiator
+Classic/wheatstone.txt Wheatstone Bridge
+Classic/lrc-critical.txt Critically Damped LRC
+Classic/currentsrcelm.txt Current Source
+Classic/inductkick.txt Inductive Kickback
+Classic/inductkick-snub.txt Blocking Inductive Kickback
+Classic/powerfactor1.txt Power Factor
+Classic/powerfactor2.txt Power Factor Correction
+Classic/grid.txt Resistor Grid
+Classic/grid2.txt Resistor Grid 2
+Classic/cube.txt Resistor Cube
++Coupled LC's
+Classic/coupled1.txt LC Modes (2)
+Classic/coupled2.txt Weak Coupling
+Classic/coupled3.txt LC Modes (3)
+Classic/ladder.txt LC Ladder
+-
+Classic/phaseseq.txt Phase-Sequence Network
+Classic/lissa.txt Lissajous Figures
+-
++Diodes
+Classic/diodevar.txt Diode
+Classic/diodecurve.txt Diode I/V Curve
+Classic/rectify.txt Half-Wave Rectifier
+Classic/fullrect.txt Full-Wave Rectifier
+Classic/fullrectf.txt Full-Wave Rectifier w/ Filter
+Classic/diodelimit.txt Diode Limiter
++Zener Diodes
+Classic/zeneriv.txt I/V Curve
+Classic/zenerref.txt Voltage Reference
+Classic/zenerreffollow.txt Voltage Reference w/ Follower
+-
+Classic/dcrestoration.txt DC Restoration
+Classic/inductkick-block.txt Blocking Inductive Kickback
+Classic/spikegen.txt Spike Generator
++Voltage Multipliers
+Classic/voltdouble.txt Voltage Doubler
+Classic/voltdouble2.txt Voltage Doubler 2
+Classic/volttriple.txt Voltage Tripler
+Classic/voltquad.txt Voltage Quadrupler
+-
+Classic/amdetect.txt AM Detector
+Classic/diodeclip.txt Waveform Clipper
+Classic/sinediode.txt Triangle-to-Sine Converter
+Classic/ringmod.txt Ring Modulator
+-
++Op-Amps
+Classic/opamp.txt Op-Amp
+Classic/opampfeedback.txt Op-Amp Feedback
++Amplifiers
+Classic/amp-invert.txt Inverting Amplifier
+Classic/amp-noninvert.txt Noninverting Amplifier
+Classic/amp-follower.txt Follower
+Classic/amp-diff.txt Differential Amplifier
+Classic/amp-sum.txt Summing Amplifier
+Classic/logconvert.txt Log Amplifier
+Classic/classd.txt Class-D Amplifier
+-
++Oscillators
+Classic/relaxosc.txt Relaxation Oscillator
+Classic/phaseshiftosc.txt Phase-Shift Oscillator
+Classic/triangle.txt Triangle Wave Generator
+Classic/sine.txt Sine Wave Generator
+Classic/sawtooth.txt Sawtooth Wave Generator
+Classic/vco.txt Voltage-Controlled Oscillator
+Classic/rossler.txt Rossler Circuit
+-
+Classic/amp-rect.txt Half-Wave Rectifier (inverting)
+Classic/amp-fullrect.txt Full-Wave Rectifier
+Classic/peak-detect.txt Peak Detector
+Classic/amp-integ.txt Integrator
+Classic/amp-dfdx.txt Differentiator
+Classic/amp-schmitt.txt Schmitt Trigger
+Classic/nic-r.txt Negative Impedance Converter
+Classic/gyrator.txt Gyrator
+Classic/capmult.txt Capacitance Multiplier
+Classic/howland.txt Howland Current Source
+Classic/itov.txt I-to-V Converter
+Classic/opamp-regulator.txt Voltage Regulator
+Classic/opint.txt 741 Internals
+Classic/opint-invert-amp.txt 741 (inverting amplifier)
+Classic/opint-slew.txt 741 Slew Rate
+Classic/opint-current.txt 741 Current Limits
+-
++Transistors
+Classic/npn.txt NPN Transistor
+Classic/pnp.txt PNP Transistor
+Classic/transswitch.txt Switch
+Classic/follower.txt Emitter Follower
++Multivibrators
+Classic/multivib-a.txt Astable Multivib
+Classic/multivib-bi.txt Bistable Multivib (Flip-Flop)
+Classic/multivib-mono.txt Monostable Multivib (One-Shot)
+-
+Classic/ceamp.txt Common-Emitter Amplifier
+Classic/phasesplit.txt Unity-Gain Phase Splitter
+Classic/schmitt.txt Schmitt Trigger
+Classic/currentsrc.txt Current Source
+Classic/currentsrcramp.txt Current Source Ramp
+Classic/mirror.txt Current Mirror
+Classic/darlington.txt Darlington Pair
++Differential Amplifiers
+Classic/trans-diffamp.txt Differential Input
+Classic/trans-diffamp-common.txt Common-Mode Input
+Classic/trans-diffamp-cursrc.txt Common-Mode w/Current Source
+-
++Push-Pull Follower
+Classic/pushpullxover.txt Simple, with distortion
+Classic/pushpull.txt Improved
+-
++Oscillators
+Classic/colpitts.txt Colpitts Oscillator
+Classic/hartley.txt Hartley Oscillator
+Classic/eclosc.txt Emitter-Coupled LC Oscillator
+-
+-
++MOSFETs
+Classic/nmosfet.txt n-MOSFET
+Classic/pmosfet.txt p-MOSFET
+Classic/mosswitch.txt Switch
+Classic/mosfollower.txt Source Follower
+Classic/moscurrentsrc.txt Current Source
+Classic/moscurrentramp.txt Current Ramp
+Classic/mosmirror.txt Current Mirror
+Classic/mosfetamp.txt Common-Source Amplifier
+Classic/cmosinverter.txt CMOS Inverter
+Classic/cmosinvertercap.txt CMOS Inverter (w/capacitance)
+Classic/cmosinverterslow.txt CMOS Inverter (slow transition)
+Classic/cmostransgate.txt CMOS Transmission Gate
+Classic/mux.txt CMOS Multiplexer
+Classic/samplenhold.txt Sample-and-Hold
+Classic/delayrc.txt Delayed Buffer
+Classic/leadingedge.txt Leading-Edge Detector
+Classic/switchfilter.txt Switchable Filter
+Classic/voltinvert.txt Voltage Inverter
+Classic/invertamp.txt Inverter Amplifier
+Classic/inv-osc.txt Inverter Oscillator
+-
++555 Timer Chip
+Classic/555square.txt Square Wave Generator
+Classic/555int.txt Internals
+Classic/555saw.txt Sawtooth Oscillator
+Classic/555lowduty.txt Low-duty-cycle Oscillator
+Classic/555monostable.txt Monostable Multivibrator
+Classic/555pulsemod.txt Pulse Width Modulator
+Classic/555sequencer.txt Pulse Sequencer
+Classic/555schmitt.txt Schmitt Trigger (inverting)
+Classic/555missing.txt Missing Pulse Detector
+-
++Active Filters
+Classic/filt-vcvs-lopass.txt VCVS Low-Pass Filter
+Classic/filt-vcvs-hipass.txt VCVS High-Pass Filter
+Classic/switchedcap.txt Switched-Capacitor Filter
+Classic/allpass1.txt Allpass
+Classic/allpass2.txt Allpass w/ Square
+-
++Logic Families
++RTL
+Classic/rtlinverter.txt RTL Inverter
+Classic/rtlnor.txt RTL NOR
+Classic/rtlnand.txt RTL NAND
+-
++DTL
+Classic/dtlinverter.txt DTL Inverter
+Classic/dtlnand.txt DTL NAND
+Classic/dtlnor.txt DTL NOR
+-
++TTL
+Classic/ttlinverter.txt TTL Inverter
+Classic/ttlnand.txt TTL NAND
+Classic/ttlnor.txt TTL NOR
+-
++NMOS
+Classic/nmosinverter.txt NMOS Inverter
+Classic/nmosinverter2.txt NMOS Inverter 2
+Classic/nmosnand.txt NMOS NAND
+-
++CMOS
+Classic/cmosinverter.txt CMOS Inverter
+Classic/cmosnand.txt CMOS NAND
+Classic/cmosnor.txt CMOS NOR
+Classic/cmosxor.txt CMOS XOR
+Classic/cmosff.txt CMOS Flip-Flop
+Classic/cmosmsff.txt CMOS Master-Slave Flip-Flop
+-
++ECL
+Classic/eclnor.txt ECL NOR/OR
+-
++Ternary
+Classic/3-cgand.txt CGAND
+Classic/3-cgor.txt CGOR
+Classic/3-invert.txt Complement (F210)
+Classic/3-f211.txt F211
+Classic/3-f220.txt F220
+Classic/3-f221.txt F221
+-
+-
++Combinational Logic
+Classic/xor.txt Exclusive OR
+Classic/halfadd.txt Half Adder
+Classic/fulladd.txt Full Adder
+Classic/decoder.txt 1-of-4 Decoder
+Classic/mux3state.txt 2-to-1 Mux
+Classic/majority.txt Majority Logic
+Classic/digcompare.txt 2-Bit Comparator
+Classic/7segdecoder.txt 7-Segment LED Decoder
+-
++Sequential Logic
++Flip-Flops
+Classic/nandff.txt SR Flip-Flop
+Classic/clockedsrff.txt Clocked SR Flip-Flop
+Classic/masterslaveff.txt Master-Slave Flip-Flop
+Classic/edgedff.txt Edge-Triggered D Flip-Flop
+Classic/jkff.txt JK Flip-Flop
+-
++Counters
+Classic/counter.txt 4-Bit Ripple Counter
+Classic/counter8.txt 8-Bit Ripple Counter
+Classic/synccounter.txt Synchronous Counter
+Classic/deccounter.txt Decimal Counter
+Classic/graycode.txt Gray Code Counter
+Classic/johnsonctr.txt Johnson Counter
+-
+Classic/divideby2.txt Divide-by-2
+Classic/divideby3.txt Divide-by-3
+Classic/ledflasher.txt LED Flasher
+Classic/traffic.txt Traffic Light
+Classic/dram.txt Dynamic RAM
+-
++Analog/Digital
+Classic/flashadc.txt Flash ADC
+Classic/deltasigma.txt Delta-Sigma ADC
+Classic/hfadc.txt Half-Flash (Subranging) ADC
+Classic/dac.txt Binary-Weighted DAC
+Classic/r2rladder.txt R-2R Ladder DAC
+Classic/swtreedac.txt Switch-Tree DAC
+Classic/digsine.txt Digital Sine Wave
+-
++Phase-Locked Loops
+Classic/xorphasedet.txt XOR Phase Detector
+Classic/pll.txt Type I PLL
+Classic/phasecomp.txt Phase Comparator (Type II)
+Classic/phasecompint.txt Phase Comparator Internals
+Classic/pll2.txt Type II PLL
+Classic/pll2a.txt Type II PLL (fast)
+Classic/freqdouble.txt Frequency Doubler
+-
++Transmission Lines
+Classic/tl.txt Simple TL
+Classic/tlstand.txt Standing Wave
+Classic/tlterm.txt Termination
+Classic/tlmismatch.txt Mismatched lines (Pulse)
+Classic/tlmis1.txt Mismatched lines (Standing Wave)
+Classic/tlmatch1.txt Impedance Matching (L-Section)
+Classic/tlmatch2.txt Impedance Matching (Shunt Stub)
+Classic/tlfreq.txt Stub Frequency Response
+Classic/tllopass.txt Low-Pass Filter
+Classic/tllight.txt Light Switch
+-
++Misc Devices
++JFETs
+Classic/jfetcurrentsrc.txt JFET Current Source
+Classic/jfetfollower.txt JFET Follower
+Classic/jfetfollower-nooff.txt JFET Follower w/zero offset
+Classic/jfetamp.txt Common-Source Amplifier
+Classic/volume.txt Volume Control
+-
++Tunnel Diodes
+Classic/tdiode.txt I/V Curve
+Classic/tdosc.txt LC Oscillator
+Classic/tdrelax.txt Relaxation Oscillator
+-
++Memristors
+Classic/mr.txt Memristor
+Classic/mr-sine.txt Sine Wave
+Classic/mr-square.txt Square Wave
+Classic/mr-triangle.txt Triangle Wave
+Classic/mr-sine2.txt Hard-Switching 1
+Classic/mr-sine3.txt Hard-Switching 2
+Classic/mr-crossbar.txt Crossbar Memory
+-
++Triodes
+Classic/triode.txt Triode
+Classic/triodeamp.txt Amplifier
+-
++Silicon-Controlled Rectifiers
+Classic/scr.txt SCR
+Classic/scractrig.txt AC Trigger
+-
++Current Conveyor
+Classic/cc2.txt CCII+
+Classic/cc2n.txt CCII-
+Classic/ccinductor.txt Inductor Simulator
+Classic/cc2imp.txt CCII+ Implementation
+Classic/cc2impn.txt CCII- Implementation
+Classic/cciamp.txt Current Amplifier
+Classic/ccvccs.txt VCCS
+Classic/ccdiff.txt Current Differentiator
+Classic/ccint.txt Current Integrator
+Classic/ccitov.txt Current-Controlled Voltage Source
+-
++Spark Gap
+Classic/spark-sawtooth.txt Sawtooth Generator
+Classic/tesla.txt Tesla Coil
+Classic/spark-marx.txt Marx Generator
+-
+-
+Classic/blank.txt Blank Circuit
+-
