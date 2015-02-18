@@ -1,5 +1,5 @@
-Untitled
-========
+Buzzr
+=====
 
 This is an electronics tutorial based on Paul Falstad's circuit simulator (original available at <http://www.falstad.com/circuit/>).
 
@@ -8,12 +8,12 @@ Building
 
 If you have `make` installed, just `cd src`, `make`, and then `make jar`.
 
-If not, compile with `javac *.java` and build the jar file with `jar cfm circuit.jar Manifest.txt *.class *.txt circuits/`
+If not, compile with `javac *.java` and build the jar file with `jar cfm buzzr.jar Manifest.txt *.class *.txt circuits/`
 
 Running
 -------
 
-As an application: `java -jar circuit.jar`
+As an application: `java -jar buzzr.jar`
 
 Terms and Conditions
 --------------------
