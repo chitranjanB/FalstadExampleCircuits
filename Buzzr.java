@@ -964,7 +964,7 @@ public class Buzzr extends Frame
             ResistorElm re = (ResistorElm) c1;
             CapacitorElm ce = (CapacitorElm) c2;
             return "RC = " + CircuitElm.getUnitText(re.resistance * ce.capacitance,
-                    "s");
+                    "s") + ", 5RC = " + CircuitElm.getUnitText(5*re.resistance * ce.capacitance, "s");
         }
         if (hintType == HINT_3DB_C) {
             if (!(c1 instanceof ResistorElm)) {
