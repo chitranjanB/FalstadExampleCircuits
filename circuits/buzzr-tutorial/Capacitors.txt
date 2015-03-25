@@ -1,0 +1,11 @@
+$ 1 5.0E-6 8.281975887399955 50 5.0 50
+v 128 384 128 176 0 0 40.0 12.0 0.0 0.0 0.5
+r 128 176 304 176 0 100.0
+c 304 176 304 384 0 1.0E-4 11.999999999995032
+w 304 384 128 384 0
+x 378 205 601 211 0 24 This is a capacitor.
+129 368 208 336 256 0 10
+x 380 238 762 244 0 22 Think of it like a rubber membrane
+x 381 263 863 269 0 22 inside a pipe: at first, it lets electrons move,
+x 379 287 981 293 0 22 but as it "fills" it becomes harder for electrons to move
+x 378 312 761 318 0 22 (and therefore for current to pass).
