@@ -41,7 +41,7 @@ import java.util.StringTokenizer;
 	    Font f = new Font("SansSerif", Font.BOLD, 20);
 	    g.setFont(f);
 	    g.setColor(needsHighlight() ? selectColor : whiteColor);
-	    String s = position == 0 ? "L" : "H";
+	    String s = position == 0 ? "0" : "1";
 	    if (isNumeric())
 		s = "" + position;
 	    setBbox(point1, lead1, 0);
