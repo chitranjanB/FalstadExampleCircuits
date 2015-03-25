@@ -41,7 +41,7 @@ import java.util.StringTokenizer;
 	    g.setFont(f);
 	    //g.setColor(needsHighlight() ? selectColor : lightGrayColor);
 	    g.setColor(lightGrayColor);
-	    String s = (volts[0] < threshold) ? "L" : "H";
+	    String s = (volts[0] < threshold) ? "0" : "1";
 	    if (isTernary()) {
 		if (volts[0] > 3.75)
 		    s = "2";
