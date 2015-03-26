@@ -1,0 +1,29 @@
+$ 2 5.0E-6 1.0312258501325766 50 5.0 50
+x 98 42 926 48 0 24 AND and OR gates can also be seen as switches in series and parallel:
+R 176 131 112 131 0 0 40.0 5.0 0.0 0.0 0.5
+s 176 131 224 131 0 0 false
+w 224 131 256 131 0
+s 256 131 304 131 0 0 false
+w 304 131 320 131 0
+162 320 131 368 131 1 2.1024259 1.0 0.0 0.0
+r 368 131 368 195 0 100.0
+g 368 195 368 211 0
+x 97 283 455 334 0 19 When both the switches are ON\nthe output is high, otherwise it is low. \nWhat logic gate does it remind you of?
+R 640 131 576 131 0 0 40.0 5.0 0.0 0.0 0.5
+w 640 131 640 83 0
+w 640 131 640 179 0
+w 640 179 656 179 0
+w 640 83 656 83 0
+s 656 83 720 83 0 0 false
+s 656 179 720 179 0 0 false
+w 720 83 736 83 0
+w 720 179 736 179 0
+w 736 179 736 131 0
+w 736 83 736 131 0
+162 736 131 800 131 1 2.1024259 1.0 0.0 0.0
+r 800 131 800 211 0 100.0
+g 800 211 800 227 0
+M 800 131 848 131 6 3.0
+M 368 131 400 131 6 3.0
+x 521 285 889 359 0 19 When at least one of the switches is ON\nthe output is high, otherwise it is low.\nCan you recall the name of the logic\ngate that behaves like this?
+x 198 414 883 507 1 24 Although this is a good approximation of how logic gates work,\nthat's not how they're made internally. But don't worry! We'll\nget there in a few lessons.\nThere's one more important gate we have to look at.

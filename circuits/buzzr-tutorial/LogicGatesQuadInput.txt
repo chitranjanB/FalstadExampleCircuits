@@ -1,0 +1,12 @@
+$ 0 5.0E-6 1.0312258501325766 50 5.0 50
+x 590 324 904 368 0 17 Can you remember the AND truth \ntable and guess what the \noutput will be for every combination?
+g 480 384 480 400 0
+r 416 384 480 384 0 100.0
+162 416 320 416 384 1 2.1024259 1.0 0.0 0.0
+M 416 320 496 320 6 3.0
+L 224 352 192 352 2 1 false 5.0 0.0
+L 224 336 192 336 2 1 false 5.0 0.0
+L 224 304 192 304 2 1 false 5.0 0.0
+L 224 288 192 288 2 1 false 5.0 0.0
+150 224 320 416 320 0 4 5.0
+x 71 175 705 239 0 24 Remember: logic gates can have more than 2 inputs!\n\nHere's an AND gate with four inputs:

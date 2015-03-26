@@ -1,0 +1,12 @@
+$ 0 5.0E-6 1.0312258501325766 50 5.0 50
+x 134 174 359 180 0 24 This is an OR gate:
+152 176 256 368 256 0 2 5.0
+L 176 240 128 240 2 1 false 5.0 0.0
+L 176 272 128 272 2 1 false 5.0 0.0
+M 368 256 416 256 6 3.0
+162 368 256 368 320 1 2.1024259 1.0 0.0 0.0
+r 368 320 368 368 0 100.0
+g 368 368 368 384 0
+x 531 161 592 312 0 24 OR\nA B Y\n0 0 0\n0 1 1\n1 0 1\n1 1 1
+x 452 358 809 413 0 21 Try every combination and see \nif you can guess what the output \nwill be!
+x 630 224 851 268 0 17 The output is logic level 1\nwhen at least one input is \nlogic level 1.

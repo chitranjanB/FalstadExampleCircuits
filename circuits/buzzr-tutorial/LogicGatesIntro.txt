@@ -1,0 +1,34 @@
+$ 1 5.0E-6 10.20027730826997 50 5.0 43
+x 57 77 940 203 0 25 Logic gates perform basic logic functions and are the fundamental \nbuilding blocks of digital integrated circuits. The logic inputs can \neither be 1 (True) or 0 (False). The resulting output is a single value \nof 1 if the result is true, or 0 if the result is false. \nLogic input/output 1 is equal to 5V, logic input/output 0 is equal to 0V.
+S 224 336 160 336 0 0 false 0
+S 224 400 160 400 0 0 false 0
+w 160 320 144 320 0
+w 144 320 144 288 0
+w 144 320 144 384 0
+w 144 384 160 384 0
+w 128 352 160 352 0
+w 128 352 128 416 0
+w 128 416 160 416 0
+w 128 416 128 448 0
+g 128 448 128 464 0
+R 144 288 144 256 0 0 40.0 5.0 0.0 0.0 0.5
+M 224 336 224 304 6 3.0
+M 224 400 224 368 6 3.0
+w 224 336 288 336 0
+150 288 368 384 368 0 2 0.0
+w 288 336 288 352 0
+w 224 400 288 400 0
+w 288 400 288 384 0
+162 384 368 464 368 1 2.1024259 1.0 0.0 0.0
+r 464 368 544 368 0 100.0
+g 544 368 544 400 0
+x 560 318 899 324 0 24 This is a logic gate in action.
+x 560 344 986 349 0 20 It turns on the LED if both switches are on.
+x 623 402 690 408 0 22 Try it!
+129 341 291 341 323 0 10
+x 287 276 409 282 0 24 Logic gate
+129 288 448 288 416 0 10
+129 272 448 272 352 0 10
+x 256 478 329 484 0 24 Inputs
+129 384 416 384 384 0 10
+x 378 444 460 450 0 24 Output

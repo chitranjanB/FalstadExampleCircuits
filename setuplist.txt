@@ -1,11 +1,24 @@
 ### setuplist.txt first line must be a comment
 +Tutorial
++Basis
 buzzr-tutorial/Current.txt Current
 buzzr-tutorial/Voltage.txt Voltage
 buzzr-tutorial/VoltageDifference.txt Voltage difference
 buzzr-tutorial/SupplyvsUse.txt Supplying energy, using energy
 buzzr-tutorial/Parallel.txt Elements in parallel
 buzzr-tutorial/Series.txt Elements in series
+-
++Logic gates
+buzzr-tutorial/LogicGatesIntro.txt Introduction to logic gates
+buzzr-tutorial/LogicGatesAND.txt The AND gate
+buzzr-tutorial/LogicGatesQuadInput.txt Logic gates with several inputs
+buzzr-tutorial/LogicGatesOR.txt The OR gate
+buzzr-tutorial/LogicGatesAsSwitches.txt Logic gates as switches
+buzzr-tutorial/LogicGatesNOT.txt The NOT gate
+buzzr-tutorial/LogicGatesNANDNOR.txt The NAND and NOR gates
+buzzr-tutorial/LogicGatesXOR.txt The XOR gate
+buzzr-tutorial/LogicGatesXNOR.txt The XNOR gate (final lesson)
+-
 -
 +Original examples
 +Basics

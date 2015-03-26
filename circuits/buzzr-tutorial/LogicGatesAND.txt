@@ -1,0 +1,17 @@
+$ 1 5.0E-6 10.20027730826997 50 5.0 43
+x 739 125 808 276 0 24 A B  Y\n\n0 0  0\n0 1  0\n1 0  0\n1 1  1
+x 150 265 166 271 0 24 B
+x 152 185 168 191 0 24 A
+g 343 298 343 314 0
+r 343 266 343 298 0 100.0
+162 343 218 343 266 1 2.1024259 1.0 0.0 0.0
+L 183 202 135 202 0 1 false 5.0 0.0
+L 183 234 135 234 0 1 false 5.0 0.0
+M 343 218 391 218 0 2.5
+x 16 377 605 470 0 24 It implements the AND function: the output is 1\nonly if all inputs are 1.\n\nTry out each combination and see what happens!
+x 309 198 324 204 0 24 Y
+150 183 218 343 218 0 2 5.0
+x 29 126 531 132 0 24 This is the AND logic gate you saw earlier:
+130 832 95 720 288 0
+129 768 352 768 304 0 10
+x 681 380 993 502 0 24 This is the "truth table" for\nan AND gate. It tells you\nwhat output you get\nfor each input\ncombination.

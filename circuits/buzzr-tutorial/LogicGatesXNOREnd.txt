@@ -1,0 +1,13 @@
+$ 0 5.0E-6 1.0312258501325766 50 5.0 50
+x 304 374 870 467 1 24 We're done with logic functions!\n\nIn the next lessons we'll introduce a new device and find out\nhow logic gates are actually made!
+x 631 185 887 213 0 19 When the two inputs \nare alike the output is high.
+x 516 157 577 279 0 24 A B Y\n0 0 1\n0 1 0\n1 0 0\n1 1 1
+I 320 176 368 176 0 0.5
+154 144 176 320 176 0 2 0.0
+L 144 160 112 160 2 1 false 5.0 0.0
+L 144 192 112 192 2 1 false 5.0 0.0
+M 368 176 400 176 6 3.0
+162 368 176 368 240 1 2.1024259 1.0 0.0 0.0
+r 368 240 448 240 0 100.0
+g 448 240 448 256 0
+x 56 89 937 95 0 24 By placing a NOT gate in series with an XOR gate you get the XNOR gate:
