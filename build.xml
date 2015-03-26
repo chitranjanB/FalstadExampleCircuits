@@ -1,0 +1,28 @@
+<project>
+
+	<target name="clean">
+		<delete dir="build"/>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="build/classes"/>
+		<javac srcdir="src" destdir="build/classes" includeantruntime="false">
+		</javac>
+
+		<mkdir dir="build/jar"/>
+		<jar destfile="buzzr.jar" basedir="build/classes">
+		<fileset dir=".">
+			<include name="circuits/**"/>
+		</fileset>
+		<fileset file="setuplist.txt" />
+			<manifest>
+				<attribute name="Main-Class" value="Buzzr"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run">
+		<java jar="buzzr.jar" fork="true" />
+	</target>
+
+</project>

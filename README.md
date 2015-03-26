@@ -6,14 +6,11 @@ This is an electronics tutorial based on Paul Falstad's circuit simulator (origi
 Building
 --------
 
-If you have `make` installed, just `cd src`, `make`, and then `make jar`.
+The preferred build process is using Apache Ant: use `ant compile` to build, then `ant run` to run the application.
 
-If not, compile with `javac *.java` and build the jar file with `jar cfm buzzr.jar Manifest.txt *.class *.txt circuits/`
+If you don't have `ant`, but have `make`, run `make jar` to compile, and then `make run` to run the application.
 
-Running
--------
-
-As an application: `java -jar buzzr.jar`
+If you have neither, compile with `javac src/*.java`, build the jar file with `jar cfm buzzr.jar Manifest.txt *.class *.txt circuits/`, and run the application with `java -jar buzzr.jar`.
 
 Terms and Conditions
 --------------------

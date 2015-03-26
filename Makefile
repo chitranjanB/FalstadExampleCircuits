@@ -1,18 +1,18 @@
 name = buzzr
 
 all:
-	javac *.java
+	@echo "Makefile is outdated, please use ant if possible!"
+	javac src/*.java
 
 jar: $(name).jar
+	@echo "Makefile is outdated, please use ant if possible!"
 	chmod +x $(name).jar
-
-src:
-	cd .. && zip -r circuit-src.zip src/Makefile src/*.java src/*.txt src/circuits/
 
 run: all
 	java Circuit
 
 $(name).jar: all
+	@echo "Makefile is outdated, please use ant if possible!"
 	jar cfm $(name).jar Manifest.txt *.class *.txt circuits/
 
 clean:
