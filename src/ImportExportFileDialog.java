@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
@@ -81,35 +80,23 @@ implements ImportExportDialog
     private static String readFile(String path)
     throws IOException, FileNotFoundException
     {
-	FileInputStream stream = null;
 	try
-	{
-	    stream = new FileInputStream(new File(path));
+	(FileInputStream stream = new FileInputStream(new File(path))) {
 	    FileChannel fc = stream.getChannel();
 	    MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY,
 					 0, fc.size());
 	    return Charset.forName("UTF-8").decode(bb).toString();
-	}
-	finally
-	{
-	    stream.close();
 	}
     }
 
     private static void writeFile(String path)
     throws IOException, FileNotFoundException
     {
-	FileOutputStream stream = null;
 	try
-	{
-	    stream = new FileOutputStream(new File(path));
+	(FileOutputStream stream = new FileOutputStream(new File(path))) {
 	    FileChannel fc = stream.getChannel();
 	    ByteBuffer bb = Charset.forName("UTF-8").encode(circuitDump);
 	    fc.write(bb);
-	}
-	finally
-	{
-	    stream.close();
 	}
     }
 }

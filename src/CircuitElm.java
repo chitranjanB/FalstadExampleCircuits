@@ -625,6 +625,4 @@ public abstract class CircuitElm implements Editable {
     Rectangle getBoundingBox() { return boundingBox; }
     boolean needsShortcut() { return getShortcut() > 0; }
     int getShortcut() { return 0; }
-
-    boolean isGraphicElmt() { return false; }
 }

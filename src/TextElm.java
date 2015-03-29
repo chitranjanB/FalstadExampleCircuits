@@ -1,24 +1,24 @@
 import java.awt.*;
 import java.util.StringTokenizer;
-import java.util.Vector;
+import java.util.ArrayList;
 
 class TextElm extends GraphicElm {
     String text;
-    Vector<String> lines;
+    ArrayList<String> lines;
     int size;
     final int FLAG_CENTER = 1;
     final int FLAG_BAR = 2;
     public TextElm(int xx, int yy) {
 	super(xx, yy);
 	text = "hello";
-	lines = new Vector<String>();
+	lines = new ArrayList<>();
 	lines.add(text);
 	size = 24;
     }
     public TextElm(int xa, int ya, int xb, int yb, int f,
 		   StringTokenizer st) {
 	super(xa, ya, xb, yb, f);
-	size = new Integer(st.nextToken()).intValue();
+	size = new Integer(st.nextToken());
 	text = st.nextToken();
 	while (st.hasMoreTokens())
 	    text += ' ' + st.nextToken();
@@ -26,8 +26,8 @@ class TextElm extends GraphicElm {
     }
     void split() {
 	int i;
-	lines = new Vector<String>();
-	StringBuffer sb = new StringBuffer(text);
+	lines = new ArrayList<>();
+	StringBuilder sb = new StringBuilder(text);
 	for (i = 0; i < sb.length(); i++) {
 	    char c = sb.charAt(i);
 	    if (c == '\\') {
@@ -47,12 +47,24 @@ class TextElm extends GraphicElm {
 	return super.dump() + " " + size + " " + text;
     }
     int getDumpType() { return 'x'; }
+
     void drag(int xx, int yy) {
-	x = xx;
+        /*
+        x = xx;
 	y = yy;
 	x2 = xx+16;
 	y2 = yy;
+        */
+    
+	xx = sim.snapGrid(xx);
+	yy = sim.snapGrid(yy);
+        x = xx;
+        y = yy;
+        x2 = xx+16;
+        y2 = yy;
+	setPoints();
     }
+    
     void draw(Graphics g) {
 	//Graphics2D g2 = (Graphics2D)g;
 	//g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -64,14 +76,14 @@ class TextElm extends GraphicElm {
 	int i;
 	int maxw = -1;
 	for (i = 0; i != lines.size(); i++) {
-	    int w = fm.stringWidth((String) (lines.elementAt(i)));
+	    int w = fm.stringWidth((String) (lines.get(i)));
 	    if (w > maxw)
 		maxw = w;
 	}
 	int cury = y;
 	setBbox(x, y, x, y);
 	for (i = 0; i != lines.size(); i++) {
-	    String s = (String) (lines.elementAt(i));
+	    String s = (String) (lines.get(i));
 	    if ((flags & FLAG_CENTER) != 0)
 		x = (sim.winSize.width-fm.stringWidth(s))/2;
 	    g.drawString(s, x, cury);
